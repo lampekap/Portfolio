@@ -4,6 +4,35 @@ body {
 	margin-right: 80px;
 	font-family: 'Exo';font-size: 22px;
 }
+.video {
+	position: relative;
+	margin:auto;
+	width: 80%;
+	padding-bottom: 56.25%;
+}
+iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 0;
+	width: 100%;
+	height: 100%;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+li a:hover {
+	color: #055864;
+}
+.inline {
+	color: #055864;
+}
+#visual {
+	width: 100vw;
+	margin-left: -80px;
+	margin-right: -80px;
+}
 #menu {
   list-style-type: none;
   display: flex;
@@ -15,18 +44,17 @@ body {
 .menuitem {
 	padding: 10px;
 }
-#header {
+.flexheader {
 	display:flex;
 	flex-wrap: wrap;
-	justify-content:space-around;
+	justify-content:space-between;
 	margin-top: 40px;
-
 }
 .headerText {
-	max-width: 40%;
+	max-width: 60%;
 }
-#header img {
-	margin-left: 80px;
+.flexheader img {
+	max-width: 35%;
 	padding: 20px;
 }
 h2 {
@@ -43,23 +71,71 @@ h2 {
 	position: relative;
 	display: block;
 	width: 30%;
-	padding-top: 30%;
 	background-color: red;
+	box-shadow: 4px 4px #055864;
 }
-
+.project img {
+	width: 100%;
+	height: 100%;
+}
+.project:hover .overlay {
+  opacity: 0.9;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #055864;
+}
+.overlay p {
+	width: 80%;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-40%, -40%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.contact_header img {
+	float:left;
+}
 @media only screen and (max-width: 1480px) {
 	.project {
 		width: 40%;
-		padding-top: 40%;
 	}
 }
 @media only screen and (max-width: 1100px) {
+	.headerText {
+		max-width: 80%;
+	}
+	.flexheader img {
+		max-width: 90%;
+		margin-left: 0px;
+	}
 	.project {
-		width: 80%;
-		padding-top: 80%;
+		width: 90%;
+		justify-self: center;
 	}
 }
+.center {
+	display: block;
+	margin: auto;
+}
 @media only screen and (max-width: 600px) {
-		header img {
-		width: 300px;
-	}
+		#visual {
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+		body {
+			margin: 5px;
+		}
+
